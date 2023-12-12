@@ -8,6 +8,17 @@ module.exports = {
         entry1: './src/entry1.js',
         entry2: './src/entry2.js',
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    path.resolve(__dirname, 'loaders/logger1.js'),
+                    path.resolve(__dirname, 'loaders/logger2.js')
+                ]
+            }
+        ]
+    },
     plugins: [
         new RunPlugin(),
         new DonePlugin()

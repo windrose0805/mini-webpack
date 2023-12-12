@@ -12,7 +12,7 @@ function webpack(options) {
     const argv = process.argv.slice(2)
 
     const shellOptions = argv.reduce((shellOptions, option) => {
-        let [key, value] = option.split('=')
+        const [key, value] = option.split('=')
         shellOptions[key.slice(2)] = value
         return shellOptions
     }, {})
@@ -29,8 +29,6 @@ function webpack(options) {
     // 3. 加载所有配置的插件
 
     finalOptions.plugins.forEach(plugin => plugin.apply(compiler))
-    
-    // 4. 执行Compiler对象的run方法，开始编
     
     
     return compiler
