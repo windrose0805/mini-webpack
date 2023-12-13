@@ -19,7 +19,7 @@ class Compiler {
             fileDependencies.forEach(fileDependency => {
                 fs.watch(fileDependency, () => _this.compile(onCompiled))
             })
-            console.log('onCompiled')
+            // console.log('onCompiled')
         }
         this.hooks.run.call()
 

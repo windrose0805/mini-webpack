@@ -19,9 +19,6 @@ function webpack(options) {
 
     const finalOptions = { ...options, ...shellOptions }
 
-    console.log(finalOptions)
-
-
     // 2. 用上一步得到的参数初始化compiler对象
 
     const compiler = new Compiler(finalOptions)

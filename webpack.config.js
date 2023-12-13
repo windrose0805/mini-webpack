@@ -8,6 +8,9 @@ module.exports = {
         entry1: './src/entry1.js',
         entry2: './src/entry2.js',
     },
+    resolve: {
+        extensions: ['.js']
+    },
     module: {
         rules: [
             {
